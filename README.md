@@ -1,0 +1,2 @@
+# BetForge
+struct
