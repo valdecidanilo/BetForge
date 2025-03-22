@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 58d353e60fd9e134abe895fba8a82519
+guid: 98fa944a76860ad49b04d54a37e5519b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -95,14 +95,14 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 12
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 0
+    overridden: 1
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
@@ -113,13 +113,13 @@ TextureImporter:
       name: Roupa1_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 443
-        width: 64
-        height: 65
+        x: 8
+        y: 887
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 20, y: 20, z: 20, w: 20}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -134,13 +134,13 @@ TextureImporter:
       name: Roupa1_1
       rect:
         serializedVersion: 2
-        x: 76
-        y: 443
-        width: 64
-        height: 65
+        x: 152
+        y: 887
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 20, y: 20, z: 20, w: 20}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -155,10 +155,10 @@ TextureImporter:
       name: Roupa1_2
       rect:
         serializedVersion: 2
-        x: 144
-        y: 443
-        width: 65
-        height: 65
+        x: 288
+        y: 884
+        width: 132
+        height: 131
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,10 +176,10 @@ TextureImporter:
       name: Roupa1_3
       rect:
         serializedVersion: 2
-        x: 212
-        y: 443
-        width: 68
-        height: 65
+        x: 428
+        y: 887
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,10 +197,10 @@ TextureImporter:
       name: Roupa1_4
       rect:
         serializedVersion: 2
-        x: 283
-        y: 443
-        width: 113
-        height: 65
+        x: 566
+        y: 887
+        width: 225
+        height: 129
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,10 +218,10 @@ TextureImporter:
       name: Roupa1_5
       rect:
         serializedVersion: 2
-        x: 398
-        y: 464
-        width: 114
-        height: 32
+        x: 797
+        y: 929
+        width: 227
+        height: 63
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,10 +239,10 @@ TextureImporter:
       name: Roupa1_6
       rect:
         serializedVersion: 2
-        x: 25
-        y: 400
-        width: 22
-        height: 22
+        x: 296
+        y: 752
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,34 +257,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Roupa1_7
-      rect:
-        serializedVersion: 2
-        x: 97
-        y: 400
-        width: 22
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 52ca1dd4d12651c45afea432a7e95287
-      internalID: -1224211665
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Roupa1_8
       rect:
         serializedVersion: 2
-        x: 148
-        y: 376
-        width: 64
-        height: 64
+        x: 51
+        y: 801
+        width: 42
+        height: 42
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -302,10 +281,10 @@ TextureImporter:
       name: Roupa1_9
       rect:
         serializedVersion: 2
-        x: 219
-        y: 376
-        width: 60
-        height: 60
+        x: 195
+        y: 801
+        width: 42
+        height: 42
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -323,10 +302,10 @@ TextureImporter:
       name: Roupa1_10
       rect:
         serializedVersion: 2
-        x: 301
-        y: 389
-        width: 39
-        height: 38
+        x: 442
+        y: 760
+        width: 114
+        height: 114
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -344,10 +323,10 @@ TextureImporter:
       name: Roupa1_11
       rect:
         serializedVersion: 2
-        x: 377
-        y: 392
-        width: 35
-        height: 32
+        x: 603
+        y: 779
+        width: 77
+        height: 74
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -365,10 +344,10 @@ TextureImporter:
       name: Roupa1_12
       rect:
         serializedVersion: 2
-        x: 7
-        y: 16
-        width: 95
-        height: 352
+        x: 755
+        y: 784
+        width: 65
+        height: 63
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -386,10 +365,10 @@ TextureImporter:
       name: Roupa1_13
       rect:
         serializedVersion: 2
-        x: 106
-        y: 300
-        width: 64
-        height: 65
+        x: 9
+        y: 36
+        width: 185
+        height: 701
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -407,13 +386,13 @@ TextureImporter:
       name: Roupa1_14
       rect:
         serializedVersion: 2
-        x: 178
-        y: 300
-        width: 64
-        height: 65
+        x: 212
+        y: 600
+        width: 128
+        height: 129
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 30, y: 30, z: 30, w: 30}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -425,22 +404,43 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Roupa2_0
+      name: Roupa1_16
       rect:
         serializedVersion: 2
-        x: 256
-        y: 299
-        width: 66
-        height: 66
+        x: 514
+        y: 599
+        width: 128
+        height: 129
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 10, y: 14, z: 11, w: 13}
+      border: {x: 20, y: 20, z: 20, w: 20}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05e6967c3d0315e469a106b550dd6e40
-      internalID: -1226546504
+      spriteID: 6373e28e5e8245a4f825368e0100d2d8
+      internalID: -1641470912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roupa1_15
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 600
+        width: 128
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 30, y: 30, z: 30, w: 30}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d36b81b2f299ce947bc16289027f79d8
+      internalID: 1452660993
       vertices: []
       indices: 
       edges: []
@@ -463,6 +463,8 @@ TextureImporter:
       Roupa1_12: 2021119039
       Roupa1_13: -66894880
       Roupa1_14: -1814107338
+      Roupa1_15: 1452660993
+      Roupa1_16: -1641470912
       Roupa1_2: -104163569
       Roupa1_3: -30748769
       Roupa1_4: 186049308
@@ -471,7 +473,6 @@ TextureImporter:
       Roupa1_7: -1224211665
       Roupa1_8: 1556133518
       Roupa1_9: 522584970
-      Roupa2_0: -1226546504
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
