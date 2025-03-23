@@ -4,5 +4,18 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/AdditiveScene/Scenes/Core.unity
+    guid: 4b59037d79c46964386f59cc1663c054
+  - enabled: 1
+    path: Assets/AdditiveScene/Scenes/BetForm.unity
+    guid: 6900bdce4fae5a04b999da8b68bf224f
+  - enabled: 1
+    path: Assets/AdditiveScene/Scenes/UI.unity
+    guid: cddfd302e977283489008f1d27995b61
+  - enabled: 1
+    path: Assets/AdditiveScene/Scenes/Bonus.unity
+    guid: 7aa4ca57cf95677408e1a4e9e19c1409
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0
