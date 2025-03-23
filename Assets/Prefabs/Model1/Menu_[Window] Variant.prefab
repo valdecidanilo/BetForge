@@ -20,6 +20,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1636177992636027056, guid: 29f87da7fdfc8f6498c07f308676a8df, type: 3}
+      propertyPath: LocalizationKey
+      value: Menu.Review
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173902706798849148, guid: 29f87da7fdfc8f6498c07f308676a8df, type: 3}
+      propertyPath: LocalizationKey
+      value: Menu.Settings
+      objectReference: {fileID: 0}
     - target: {fileID: 2318971607725239678, guid: 29f87da7fdfc8f6498c07f308676a8df, type: 3}
       propertyPath: m_SizeDelta.x
       value: 277.1703
@@ -44,6 +52,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -128
       objectReference: {fileID: 0}
+    - target: {fileID: 3526102976640732813, guid: 29f87da7fdfc8f6498c07f308676a8df, type: 3}
+      propertyPath: LocalizationKey
+      value: Menu.Continue
+      objectReference: {fileID: 0}
     - target: {fileID: 5507392225132570483, guid: 29f87da7fdfc8f6498c07f308676a8df, type: 3}
       propertyPath: m_Name
       value: Menu_[Window] Variant
@@ -59,6 +71,10 @@ PrefabInstance:
     - target: {fileID: 5531592062804870027, guid: 29f87da7fdfc8f6498c07f308676a8df, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 126.993164
+      objectReference: {fileID: 0}
+    - target: {fileID: 6340461863321887840, guid: 29f87da7fdfc8f6498c07f308676a8df, type: 3}
+      propertyPath: LocalizationKey
+      value: Menu.Title
       objectReference: {fileID: 0}
     - target: {fileID: 8015276587649643583, guid: 29f87da7fdfc8f6498c07f308676a8df, type: 3}
       propertyPath: m_Pivot.x
@@ -139,6 +155,10 @@ PrefabInstance:
     - target: {fileID: 8015276587649643583, guid: 29f87da7fdfc8f6498c07f308676a8df, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817576376867946053, guid: 29f87da7fdfc8f6498c07f308676a8df, type: 3}
+      propertyPath: LocalizationKey
+      value: Menu.NewGame
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
