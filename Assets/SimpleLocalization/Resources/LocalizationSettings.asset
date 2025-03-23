@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63817d93022759543b57e795c78efe11, type: 3}
   m_Name: LocalizationSettings
   m_EditorClassIdentifier: 
-  TableId: 1RvKY3VE_y5FPhEECCa5dv4F7REJ7rBtGzQg9Z_B_DE4
+  TableId: 1L4qI2ZwKMcQrMySZbkftQ2w2Ebxu5HtRDfuxUDF8wYs
   Sheets:
   - Name: Menu
     Id: 0
