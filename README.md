@@ -32,13 +32,13 @@ Este documento define a estruturação de um projeto Unity usando Git para:
 ### Diagrama de Fluxo
 ```mermaid
 graph TD
-    A[main] --> B[core]
+    A[core] --> B[main]
     B --> C[develop]
     C --> D[feature/new-menu]
     C --> E[feature/enemy-ai]
     D --> C
     E --> C
-    C -->|Release| A
+    C -->|Release| B
 ```
 ## Organização de Pastas <a name="organização-de-pastas"></a>
 ```
