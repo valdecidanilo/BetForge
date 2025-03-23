@@ -44,7 +44,7 @@ graph TD
     C -->|Release| A
 ```
 ## Organização de Pastas <a name="organização-de-pastas"></a>
-```mermaid
+```
 Assets/
 ├─ Core/                  # Sistemas compartilhados
 │  ├─ Scripts/            # Código central (ex: SaveSystem.cs)
