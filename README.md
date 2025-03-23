@@ -27,7 +27,7 @@ Este documento define a estruturação de um projeto Unity usando Git para:
 ### Principais Branches
 | Nome          | Função                                                                 |
 |---------------|------------------------------------------------------------------------|
-| **`main`**    | Versão estável (implantável para o público).                          |
+| **`master`**    | Versão estável (implantável para o público).                          |
 | **`core`**    | Sistemas centrais (save, input, UI base).                             |
 | **`develop`** | Branch de integração para features.                                   |
 | **`feature/*`** | Branches temporárias para funcionalidades específicas (ex: `feature/new-menu`). |
