@@ -44,7 +44,8 @@ graph TD
 ```
 Assets/
 ├─ Core/                  # Sistemas compartilhados
-│  ├─ Scripts/            # Código central (ex: SaveSystem.cs)
+│  ├─ Scripts/
+│  ├─ Data/
 │  ├─ Prefabs/            # Prefabs base (ex: Player.prefab)
 ├─ Features/              # Funcionalidades isoladas
 │  ├─ NewMenu/            # Implementação completa de um menu
