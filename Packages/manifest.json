@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.opagames.websocket": "https://github.com/OPAGames/com.opagames.websocket.git#upm",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.collab-proxy": "2.7.1",
     "com.unity.editorcoroutines": "1.0.0",

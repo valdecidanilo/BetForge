@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.opagames.websocket": {
+      "version": "https://github.com/OPAGames/com.opagames.websocket.git#upm",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "e41448a146b60b0dcb03897ff3f225087b4ec31e"
+    },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
       "depth": 0,
