@@ -34,8 +34,8 @@ Este documento define a estruturação de um projeto Unity usando Git para:
 graph TD
     A[core] --> B[main]
     B --> C[develop]
-    C --> D[feature/new-menu]
-    C --> E[feature/enemy-ai]
+    C --> D[feature/Style1]
+    C --> E[feature/Style2]
     D --> C
     E --> C
     C -->|Release| B
