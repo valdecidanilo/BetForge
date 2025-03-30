@@ -239,7 +239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   typeCurrency: {fileID: 1638335496}
   valueNumber: {fileID: 158391724}
-  apiType: BRL
+  currencyCode: 4
 --- !u!1001 &158391722
 PrefabInstance:
   m_ObjectHideFlags: 0
