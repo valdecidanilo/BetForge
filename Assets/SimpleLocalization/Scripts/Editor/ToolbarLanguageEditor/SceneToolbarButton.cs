@@ -7,7 +7,8 @@ using UnityEngine.UIElements;
 
 namespace SimpleLocalization.Scripts.Editor
 {
-    [Overlay(typeof(SceneView), "Language Overlay")]
+    [Overlay(typeof(SceneView), "Language Overlay", "Language Selection Tool")]
+    [Icon("Assets/SimpleLocalization/Scripts/Editor/Sources/LanguageIcon.png")]
     public class LanguageOverlay : Overlay
     {
         private VisualElement _root;
@@ -16,8 +17,11 @@ namespace SimpleLocalization.Scripts.Editor
         public override VisualElement CreatePanelContent()
         {
             // Cria um container para os elementos
-            _root = new VisualElement();
-
+            _root = new VisualElement{ style = { paddingTop = 5, paddingBottom = 5 } };
+            var title = new Label("Select Language");
+            title.style.unityFontStyleAndWeight = FontStyle.Bold;
+            title.style.marginBottom = 5;
+            _root.Add(title);
             // Adiciona botões para cada idioma
             foreach (var language in LocalizationManager.Dictionary.Keys)
             {
@@ -30,9 +34,9 @@ namespace SimpleLocalization.Scripts.Editor
             }
 
             // Adiciona um dropdown para selecionar o idioma
-            _languageDropdown = new DropdownField("Selecione o Idioma", LocalizationManager.Dictionary.Keys.ToList(), 0);
+            /* = new DropdownField("Selecione o Idioma", LocalizationManager.Dictionary.Keys.ToList(), 0);
             _languageDropdown.RegisterValueChangedCallback(evt => ChangeLanguage(evt.newValue));
-            _root.Add(_languageDropdown);
+            _root.Add(_languageDropdown);*/
 
             return _root;
         }
@@ -41,7 +45,6 @@ namespace SimpleLocalization.Scripts.Editor
         {
             // Muda o idioma
             LocalizationManager.Language = language;
-            Debug.Log($"Idioma alterado para: {language}");
         }
     }
 }
