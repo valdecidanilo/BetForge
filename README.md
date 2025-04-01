@@ -40,6 +40,23 @@ graph TD
     E --> C
     C -->|Release| B
 ```
+
+### Diagrama Teste
+```mermaid
+sequenceDiagram
+    participant Frontend
+    participant Backend
+    Frontend->>Backend: POST /join (Entrar no jogo)
+    Backend-->>Frontend: Configurações + Saldo do Usuário
+    Frontend->>Backend: POST /bet (Fazer aposta)
+    Backend-->>Frontend: Confirmação da aposta
+    loop Rodada em Andamento
+        Backend->>Frontend: Envia multiplicador atual
+        Frontend->>Backend: POST /cashout (Resgatar)
+    end
+    Backend-->>Frontend: Resultado final (Crash ou Cashout)
+```
+
 ## Organização de Pastas <a name="organização-de-pastas"></a>
 ```
 Assets/
