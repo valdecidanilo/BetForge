@@ -44,41 +44,55 @@ graph TD
 ### Diagrama Teste
 ```mermaid
 sequenceDiagram
+    participant Jogador
     participant Frontend
     participant Backend
     
     %% Entrada no Jogo
-    Frontend->>Backend: POST /join (Entrar no jogo)
+    Jogador->>Frontend: Clica para entrar no jogo
+    Frontend->>Backend: POST /join
     Backend-->>Frontend: Configurações + Pay Table
-    Note right of Backend: {"pay_table": [{"mines":1,"odds":[1.0104,...]},...]}
+    Frontend-->>Jogador: Exibe interface do jogo
     
     %% Aposta Inicial
-    Frontend->>Backend: POST /bet 
-    Note left of Frontend: {"bet_value":4,"number_of_mines":3}
-    Backend-->>Frontend: Confirmação da Aposta
-    Note right of Backend: {"status":0,"tiles":[0,0,...],"payout_multiplier_on_next":1.1022}
+    Jogador->>Frontend: Define aposta (valor=4, minas=1)
+    Frontend->>Backend: POST /bet
+    Note left of Frontend: {"bet_value":4,"number_of_mines":1}
+    Backend-->>Frontend: Confirmação da aposta
+    Note right of Backend: {"status":0,"payout_multiplier_on_next":1.1085,...}
+    Frontend-->>Jogador: Exibe grid vazio (floor 0)
     
     %% Loop de Jogadas
-    loop Até Cashout ou Mina
-        Frontend->>Backend: POST /reveal (Clicar em tile)
-        Backend-->>Frontend: Atualização do Estado
-        Note right of Backend: Atualiza "tiles" e "payout_multiplier"
+    loop Até Cashout ou Explosão
+        Jogador->>Frontend: Clica em célula (posição 4)
+        Frontend->>Backend: POST /reveal
+        Note left of Frontend: {"position":4}
         
-        alt Tile seguro
-            Backend-->>Frontend: Multiplicador atualizado
-            Note right of Backend: "payout_multiplier_on_next": novo_valor
-        else Mina encontrada
-            Backend-->>Frontend: Fim de jogo (perda)
-            Note right of Backend: "status":2, tiles revelados
+        alt Célula segura
+            Backend-->>Frontend: Atualização do jogo
+            Note right of Backend: {"floor":1,"payout_multiplier":1.1085,...}
+            Frontend-->>Jogador: Atualiza grid e multiplicador
+            
+            alt Ativação de bônus
+                Backend-->>Frontend: special_round=true
+                Frontend-->>Jogador: Exibe modo especial
+            end
+            
+        else Célula com bomba
+            Backend-->>Frontend: Fim de jogo
+            Note right of Backend: {"bomb_hit":true,"status":2}
+            Frontend-->>Jogador: Mostra explosão
         end
     end
     
     %% Cashout
+    Jogador->>Frontend: Clica em Cashout
     Frontend->>Backend: POST /cashout
-    Backend-->>Frontend: Resultado do Cashout
-    Note right of Backend: {"payout_multiplier":1.1022,"status":1,"tiles":[...]}
-    Backend-->>Frontend: Atualização de Saldo
-    Note right of Backend: {"balance":"5999.03","playing_bets":[]}
+    Backend-->>Frontend: Resultado do cashout
+    Note right of Backend: {"payout_multiplier":1.1085,"total_cashout":4.43,...}
+    Backend-->>Frontend: Atualização de saldo
+    Note right of Backend: {"balance":942326.37}
+    Frontend-->>Jogador: Exibe ganhos e novo saldo
 ```
 
 ## Organização de Pastas <a name="organização-de-pastas"></a>
