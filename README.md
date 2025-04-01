@@ -46,15 +46,39 @@ graph TD
 sequenceDiagram
     participant Frontend
     participant Backend
+    
+    %% Entrada no Jogo
     Frontend->>Backend: POST /join (Entrar no jogo)
-    Backend-->>Frontend: Configurações + Saldo do Usuário
-    Frontend->>Backend: POST /bet (Fazer aposta)
-    Backend-->>Frontend: Confirmação da aposta
-    loop Rodada em Andamento
-        Backend->>Frontend: Envia multiplicador atual
-        Frontend->>Backend: POST /cashout (Resgatar)
+    Backend-->>Frontend: Configurações + Pay Table
+    Note right of Backend: {"pay_table": [{"mines":1,"odds":[1.0104,...]},...]}
+    
+    %% Aposta Inicial
+    Frontend->>Backend: POST /bet 
+    Note left of Frontend: {"bet_value":4,"number_of_mines":3}
+    Backend-->>Frontend: Confirmação da Aposta
+    Note right of Backend: {"status":0,"tiles":[0,0,...],"payout_multiplier_on_next":1.1022}
+    
+    %% Loop de Jogadas
+    loop Até Cashout ou Mina
+        Frontend->>Backend: POST /reveal (Clicar em tile)
+        Backend-->>Frontend: Atualização do Estado
+        Note right of Backend: Atualiza "tiles" e "payout_multiplier"
+        
+        alt Tile seguro
+            Backend-->>Frontend: Multiplicador atualizado
+            Note right of Backend: "payout_multiplier_on_next": novo_valor
+        else Mina encontrada
+            Backend-->>Frontend: Fim de jogo (perda)
+            Note right of Backend: "status":2, tiles revelados
+        end
     end
-    Backend-->>Frontend: Resultado final (Crash ou Cashout)
+    
+    %% Cashout
+    Frontend->>Backend: POST /cashout
+    Backend-->>Frontend: Resultado do Cashout
+    Note right of Backend: {"payout_multiplier":1.1022,"status":1,"tiles":[...]}
+    Backend-->>Frontend: Atualização de Saldo
+    Note right of Backend: {"balance":"5999.03","playing_bets":[]}
 ```
 
 ## Organização de Pastas <a name="organização-de-pastas"></a>
