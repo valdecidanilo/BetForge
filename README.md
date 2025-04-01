@@ -44,55 +44,31 @@ graph TD
 ### Diagrama Teste
 ```mermaid
 sequenceDiagram
-    participant Jogador
     participant Frontend
     participant Backend
     
-    %% Entrada no Jogo
-    Jogador->>Frontend: Clica para entrar no jogo
+    %% Entrada
     Frontend->>Backend: POST /join
-    Backend-->>Frontend: Configurações + Pay Table
-    Frontend-->>Jogador: Exibe interface do jogo
+    Backend-->>Frontend: Pay Table + Configs
     
-    %% Aposta Inicial
-    Jogador->>Frontend: Define aposta (valor=4, minas=1)
-    Frontend->>Backend: POST /bet
-    Note left of Frontend: {"bet_value":4,"number_of_mines":1}
-    Backend-->>Frontend: Confirmação da aposta
-    Note right of Backend: {"status":0,"payout_multiplier_on_next":1.1085,...}
-    Frontend-->>Jogador: Exibe grid vazio (floor 0)
+    %% Aposta
+    Frontend->>Backend: POST /bet (Valor: 4, Minas: 1)
+    Backend-->>Frontend: Confirmação (Floor 0)
     
-    %% Loop de Jogadas
-    loop Até Cashout ou Explosão
-        Jogador->>Frontend: Clica em célula (posição 4)
-        Frontend->>Backend: POST /reveal
-        Note left of Frontend: {"position":4}
-        
-        alt Célula segura
-            Backend-->>Frontend: Atualização do jogo
-            Note right of Backend: {"floor":1,"payout_multiplier":1.1085,...}
-            Frontend-->>Jogador: Atualiza grid e multiplicador
-            
-            alt Ativação de bônus
-                Backend-->>Frontend: special_round=true
-                Frontend-->>Jogador: Exibe modo especial
-            end
-            
-        else Célula com bomba
-            Backend-->>Frontend: Fim de jogo
-            Note right of Backend: {"bomb_hit":true,"status":2}
-            Frontend-->>Jogador: Mostra explosão
+    %% Gameplay
+    loop Cada jogada
+        Frontend->>Backend: POST /reveal (Posição)
+        alt Acerta
+            Backend-->>Frontend: Atualiza (Multiplicador + Floor)
+        else Erra
+            Backend-->>Frontend: Game Over (Bombas)
         end
     end
     
     %% Cashout
-    Jogador->>Frontend: Clica em Cashout
     Frontend->>Backend: POST /cashout
-    Backend-->>Frontend: Resultado do cashout
-    Note right of Backend: {"payout_multiplier":1.1085,"total_cashout":4.43,...}
-    Backend-->>Frontend: Atualização de saldo
-    Note right of Backend: {"balance":942326.37}
-    Frontend-->>Jogador: Exibe ganhos e novo saldo
+    Backend-->>Frontend: Resultado (1.1085x)
+    Backend-->>Frontend: Balance (942326.37)
 ```
 
 ## Organização de Pastas <a name="organização-de-pastas"></a>
